@@ -113,4 +113,4 @@ I used this training data for training the model. The validation set helped dete
 
 #### 6. Results
 Below, you can see the performance of the trained model in driving the vehicle around the first track of the simulator. 
-![][vid1]
+https://www.youtube.com/watch?v=29Dk6D0Ck68&ab_channel=SimInsider
