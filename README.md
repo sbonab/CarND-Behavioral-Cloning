@@ -51,14 +51,14 @@ For details about my approach of developing a behavioral cloner for driving the 
 #### 1. Solution Design Approach
 
 The main steps for training a model to drive around the track 
-* Using the [simulator](https://github.com/sbonab/self-driving-car-sim) to collect stream of images for a test run around the track.
+* Using the [simulator](https://github.com/sbonab/self-driving-car-sim) to collect a stream of images for a test run around the track.
 * Data augmentation
 * Preprocessing images
 * Selecting the model architecture
 * Training the model
 * Testing the results in the autonomous mode of the [simulator](https://github.com/sbonab/self-driving-car-sim).
 
-The objective was the vehicle being able to drive autonomously around the track without leaving the road
+The objective was for the vehicle to drive autonomously around the track without leaving the road
 
 #### 2. Creation of the Training Set 
 
@@ -91,7 +91,7 @@ I have created the `DataGenerator` class to generate the batches of the images o
 
 To do this, first, I create a `data` dictionary with `train` and `validation` as keys. I assume each of these is a list of sample images, represented by dictionaries with keys `path`, `position`, `flipped`, etc. As a result, instead of loading the images, I have created pointers for the images. 
 
-The `DataGenerator` class has different attributes compatible with keras. This class gets `data['train']` and `data['validation']` as inputs and creates batches of images. To use this custom generator, I have finnaly used `fit_generator()` function from keras.
+The `DataGenerator` class has different attributes compatible with keras. This class gets `data['train']` and `data['validation']` as inputs and creates batches of images. To use this custom generator, I have finally used `fit_generator()` function from keras.
 
 #### 4. Model Architecture
 
@@ -101,7 +101,7 @@ Since the problem is an end-to-end implementation for driving the vehicle around
 This architecture has 5 convolutional and 4 fully connected layers. Summary of the model:
 ![alt text][image2]
 
-I have two layers of preprocessing. First one converts image values to a value between [-1 1]. The second one crops the upper and lower stripes of the image since these areas are representing the extra elements such as trees, rocks, and car's hood.
+I have two layers of preprocessing. The first one converts image values to a value between [-1 1]. The second one crops the upper and lower stripes of the image since these areas are representing the extra elements such as trees, rocks, and the car's hood.
 
 #### 5. Training Process
 
