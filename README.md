@@ -66,7 +66,7 @@ To capture the driving behavior, I recorded a single lap on track 1 using center
 
 ![alt text][image3]
 
-I used the lowest (640x480) screen resolution and the fastest graphics quality for the simulator to avoid unnecessary high-quality images. This in turn will accelerate the training process. 
+I used the lowest (640x480) screen resolution and the fastest graphics quality for the simulator to avoid unnecessary high-quality images. This in turn will accelerate the training process. You can find a example of the data set in this [zip file](https://drive.google.com/file/d/1cv990FkEvC-7N8tRGSXx6zhN58hfrd2w/view?usp=sharing). 
 
 After the collection process, I had 8036 number of data points. However, as shown in the histogram below, the majority of these data points are correlated to zero steering. 
 
