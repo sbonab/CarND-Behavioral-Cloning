@@ -96,9 +96,11 @@ The `DataGenerator` class has different attributes compatible with keras. This c
 #### 4. Model Architecture
 
 Since the problem is an end-to-end implementation for driving the vehicle around a track, I have used a similar CNN architecture as [DAVE-2](https://developer.nvidia.com/blog/deep-learning-self-driving-cars/). An illustration of this architecture is shown in the image below
+
 ![alt text][image1]
 
 This architecture has 5 convolutional and 4 fully connected layers. Summary of the model:
+
 ![alt text][image2]
 
 I have two layers of preprocessing. The first one converts image values to a value between [-1 1]. The second one crops the upper and lower stripes of the image since these areas are representing the extra elements such as trees, rocks, and the car's hood.
